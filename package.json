@@ -1,0 +1,30 @@
+{
+  "name": "xslt_server",
+  "version": "1.0.0",
+  "description": "Standalone server to write xslt calls",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "js2xmlparser": "^1.0.0",
+    "node_xslt": "^0.1.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashu-daffodil/xslt_server.git"
+  },
+  "keywords": [
+    "xslt"
+  ],
+  "author": "Ashu & Ritesh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ashu-daffodil/xslt_server/issues"
+  },
+  "homepage": "https://github.com/ashu-daffodil/xslt_server#readme"
+}
