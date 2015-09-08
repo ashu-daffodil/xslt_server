@@ -5,14 +5,21 @@
 var express = require('express');
 var app = express();
 var bodyparser = require("body-parser");
-var PORT = 4000;
-var xslt = require('node_xslt');
+var argv = process.argv;
+var PORT = argv[2];
 
 app.use(bodyparser.urlencoded({ extended: false, limit: 1024 * 1024 * 10 }));
 app.use(bodyparser.json({limit: 1024 * 1024 * 10}));
 
+app.all('/rest/runningStatus', function (req, res) {
+    res.writeHead(200);
+    res.write("Server Running on port : "+PORT);
+    res.end();
+});
+
 app.all("/rest/xslt", function (req, res) {
     try {
+        var xslt = require('node_xslt');
         var template = req.param("template");
         var queryResult = req.param("result");
         if (queryResult) {
